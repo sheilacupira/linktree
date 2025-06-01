@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sheila Pereira - Links</title>
+  <style>
+  body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  background-image: url('assets/perfil.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.hero-bg {
+  width: 100%;
+  height: clamp(250px, 30vh, 400px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 40px;
+  text-align: left;
+}
+
+.hero-bg h1 {
+  font-size: clamp(30px, 4vw, 180px);
+  font-weight: bold;
+  margin: 0 0 12px 0;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.hero-bg h2 {
+  font-size: clamp(18px, 2.5vw, 80px);
+  font-weight: normal;
+  margin: 0;
+}
+
+.links {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.card.right {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.card-number {
+  font-size: clamp(80px, 18vw, 220px);
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.08);
+  position: absolute;
+  z-index: 0;
+}
+
+.card.right .card-number {
+  right: 0;
+}
+
+.card.left .card-number {
+  left: 0;
+}
+
+.card-img {
+  width: clamp(200px, 30vw, 320px);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.card.left .card-img {
+  margin-left: 300px;
+}
+
+.card.right .card-img {
+  margin-right: 300px;
+}
+
+.card.left:first-of-type .card-img {
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .hero-bg {
+    height: 230px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-bg h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .hero-bg h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card.right {
+    flex-direction: column;
+  }
+
+  .card-number {
+    position: relative;
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.1);
+    margin: 0 10 -20px 0;
+    text-align: center;
+    z-index: 0;
+  }
+
+  .card-img {
+    width: 55%;
+    margin: 0;
+	margin: 0 auto; /* ← garante que a imagem fique no centro se houver margem */
+    display: block;  /* ← ajuda a centralizar imagens inline */
+  }
+  .card {
+   flex-direction: column;
+   align-items: center; /* ← centraliza horizontalmente */
+   text-align: center;
+ }
+  .card.left .card-img {
+   margin-left: 85px;
+}
+.card.right .card-img {
+  margin-right: 85px;
+}
+ 
+
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="hero-bg">
+    <h1>Sheila</h1>
+    <h2>Vai clicar onde hoje?</h2>
+  </div>
+
+  <div class="links">
+    <!-- Card 1 -->
+    <div class="card left">
+      <div class="card-number">1</div>
+      <a href="https://www.youtube.com/@Senaolembracantacomsheila" target="_blank">
+        <img src="assets/SNLC.png" alt="Tudo ao mesmo tempo" class="card-img" />
+      </a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card right">
+      <div class="card-number">2</div>
+      <a href="https://www.youtube.com/@Umfiodehistória" target="_blank">
+        <img src="assets/umfio.png" alt="Um Fio de História" class="card-img" />
+      </a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card left">
+      <div class="card-number">3</div>
+      <a href="https://open.spotify.com/intl-pt/artist/70rkUyi0RK9OnSs15aZmkD" target="_blank">
+        <img src="assets/spotify.png" alt="Spotify" class="card-img" />
+      </a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card right">
+      <div class="card-number">4</div>
+      <a href="https://www.amazon.com.br/dp/B0F1CDXVCB" target="_blank">
+        <img src="assets/livro.png" alt="No Seu Lugar" class="card-img" />
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

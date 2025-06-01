@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sheila Pereira - Links</title>
+  <style>
+   body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  background-image: url('assets/perfil.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.hero-bg {
+  width: 100%;
+  height: clamp(250px, 30vh, 400px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 40px;
+  text-align: left;
+}
+
+.hero-bg h1 {
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: bold;
+  margin: 0 0 12px 0;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.hero-bg h2 {
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-weight: normal;
+  margin: 0;
+}
+
+.grid-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 60px;
+  max-width: 1300px;
+  margin: 60px auto;
+  padding: 0 40px;
+  justify-items: center;
+}
+
+.card-grid {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-grid .card-number {
+  position: absolute;
+  font-size: clamp(100px, 10vw, 180px);
+  color: rgba(255, 255, 255, 0.12);
+  z-index: 0;
+  left: 0%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.card-grid .card-img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 15px;
+  z-index: 1;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.card-grid .card-img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .hero-bg {
+    height: 230px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-bg h1 {
+    font-size: 26px;
+  }
+
+  .hero-bg h2 {
+    font-size: 18px;
+  }
+
+  .grid-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+    padding: 0 20px;
+  }
+
+  .card-grid .card-number {
+    font-size: 60px;
+    top: 10px;
+    transform: translateX(-50%);
+  }
+
+  .card-grid .card-img {
+    max-width: 160px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="hero-bg">
+    <h1>Sheila</h1>
+    <h2>Vai clicar onde hoje?</h2>
+  </div>
+
+  <div class="links">
+    <div class="grid-links">
+  <div class="card-grid">
+    
+    <a href="https://www.youtube.com/@Senaolembracantacomsheila" target="_blank">
+      <img src="assets/SNLC.png" alt="Tudo ao mesmo tempo" class="card-img" />
+    </a>
+  </div>
+  <div class="card-grid">
+    
+    <a href="https://www.youtube.com/@Umfiodehistória" target="_blank">
+      <img src="assets/umfio.png" alt="Um Fio de História" class="card-img" />
+    </a>
+  </div>
+  <div class="card-grid">
+    
+    <a href="https://open.spotify.com/intl-pt/artist/70rkUyi0RK9OnSs15aZmkD" target="_blank">
+      <img src="assets/spotify.png" alt="Spotify" class="card-img" />
+    </a>
+  </div>
+  <div class="card-grid">
+   
+    <a href="https://www.amazon.com.br/dp/B0F1CDXVCB" target="_blank">
+      <img src="assets/livro.png" alt="No Seu Lugar" class="card-img" />
+    </a>
+  </div>
+</div>
+
+
+  </div>
+
+</body>
+</html>
