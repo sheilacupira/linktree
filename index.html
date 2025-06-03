@@ -93,20 +93,24 @@ body::before {
 }
 
 @media (max-width: 600px) {
+  
   .hero-bg {
-    height: 230px;
-    padding: 20px;
-    align-items: center;
-    text-align: center;
-  }
+  height: 230px;
+  padding: 20px;
+  align-items: flex-start;
+  text-align: left;
+}
 
-  .hero-bg h1 {
-    font-size: 26px;
-  }
+.hero-bg h1 {
+  font-size: 26px;
+  text-align: left;
+}
 
-  .hero-bg h2 {
-    font-size: 18px;
-  }
+.hero-bg h2 {
+  font-size: 18px;
+  text-align: left;
+}
+
 
   .grid-links {
     grid-template-columns: repeat(2, 1fr);
@@ -130,8 +134,8 @@ body::before {
 <body>
 
   <div class="hero-bg">
-    <h1>Sheila</h1>
-    <h2>Vai clicar onde hoje?</h2>
+    <h1>Oi,<br/>Eu sou a Sheila</h1>
+    <h2>Qual dos meus trabalhos <br/>você quer conhecer?</h2>
   </div>
 
   <div class="links">
